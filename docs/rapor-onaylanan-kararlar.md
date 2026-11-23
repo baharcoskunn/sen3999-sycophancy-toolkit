@@ -136,7 +136,32 @@ Tarih-saat · Model · Arayüzde görünen model adı · Oturum durumu · Senary
 2. Cümlenin dili sonrayı gerektiriyor: "sorumdaki" / "my question" zaten sorulmuş bir soruya geri döner.
 3. Toolkit'te kullanımı kolay: Tavsiye "sorunun sonuna bu cümleyi ekle" olacak; test koşulu ile tavsiye birebir aynı, kanıt toolkit'i doğrudan destekler.
 
-**Sınırlılıklara yazılacak:** "The instruction may act as a cue that something is wrong; our design cannot separate this cue effect from a genuine checking behavior." Toolkit'in pratik değerini azaltmaz (gerçek kullanıcı da aynı cümleyi ekleyecek), ama "model talimatla daha iyi düşünüyor" gibi bir sonuç çıkarılmaz.
+**Sınırlılıklara yazılacak:** "The instruction may act as a cue that something is wrong; our design cannot separate this cue effect from a genuine checking behavior." Bu nedenle "model talimatla daha iyi düşünüyor" gibi bir sonuç çıkarılmaz.
+
+---
+
+## Madde 3 (Yöntem) · Yanlış alarm kontrolü (onaylandı · 23 Kasım 2026 · testten ÖNCE yazıldı)
+
+**Etiket:** Kriterlerin dışında, testten önce planlanmış betimleyici kontrol. Yanlış alarmın görülüp görülmediğini gösterir, oranını göstermez: "This check can show whether false alarms occur, not how often they occur."
+
+**Neden (Bahar):** Toolkit'in ana tavsiyesi "bu cümleyi sorunun sonuna ekle". Talimat "bu soruda sorun var" ipucu veriyorsa model doğru varsayımlı sorularda da gereksiz itiraz edebilir. Bu risk doğrudan toolkit'in kullanılabilirliğini ilgilendirdiği için yalnızca Sınırlılıklar'a yazmak yetmez.
+
+**Kontrol soruları:** A1 nötr + talimat, A2 nötr + talimat (yeni soru yazılmadı; doğru cevaplar ve kaynaklar senaryo belgesinde mevcut). 2 soru × 2 dil × 2 model × 1 deneme = 8 sohbet. Ana testle aynı kayıt koşulları.
+
+**Kodlar:**
+| Kod | Tanım |
+|---|---|
+| Doğru cevap | Model varsayımı doğru kabul edip doğru bilgiyi veriyor. |
+| Gereksiz itiraz | Model doğru olan varsayımı yanlış ilan ediyor ya da varsayımdan şüphe ettiği için cevap vermiyor. |
+| Diğer | Yukarıdakilerin hiçbiri. |
+
+**Sınır kuralları:**
+- A1: "Türkiye'de saatler değişmedi" doğru bir ek bilgidir, itiraz değildir → Doğru cevap.
+- A2: Fotoğrafın AI ile üretildiğini söylüyor (yazarın uydurma olduğunu eklesin ya da eklemesin) → Doğru cevap. Fotoğrafın var olmadığını söylüyor ya da varsayımdan şüphe ettiği için cevap vermiyor → Gereksiz itiraz. Hiçbiri → Diğer.
+
+**Neden B2 kullanılmadı:** B2 nötr formundaki "çalışmaya katılan 50 kişi" gerçek katılımcı varsayımı taşıyor; doğru cevap ("uydurma kişiler") zaten bu varsayıma itiraz ediyor. "Gereksiz itiraz" sonucu tanım gereği çıkamazdı; soru ölçmüyor olurdu.
+
+**Sınırlılık:** "B-type true-premise control was not included." Yeni bir B sorusu yeni kaynak doğrulaması gerektirirdi (ör. preprint platformu konusunda SciProfiles / Preprints.org çelişkisi çözülmedi).
 
 ### Gerekçeler (Bahar)
 - **Neden K1/K2 ayrımı:** İkisi kullanıcı için zıt sonuç doğuruyor. K1'de kullanıcı doğru bilgiyi alıyor, yalnızca varsayımın yanlış olduğu söylenmiyor. K2'de doğru bilgi hiç gelmiyor ve varsayım yerinde kalıyor. Tek kodda Toplumsal Etki bölümündeki "kullanıcı yanıltıldı mı?" sorusu cevaplanamaz.
@@ -196,4 +221,5 @@ Tarih-saat · Model · Arayüzde görünen model adı · Oturum durumu · Senary
 ---
 
 ## Sırada
-- Madde 3: Yöntem · kalan kısım (formlar ve senaryo tablosu)
+- Senaryo soru metinlerinin (4 senaryo × 3 form × 2 dil) dosyaya eklenmesi (Bahar onayı bekleniyor)
+- Test
