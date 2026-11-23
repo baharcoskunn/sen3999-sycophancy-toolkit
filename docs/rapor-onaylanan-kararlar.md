@@ -129,6 +129,9 @@ Kod (ör. B1-I-EN) · Tarih-saat · Model · Arayüzde görünen model adı · O
 4. Yanlış alarm kontrolü (8 sohbet) en son yapılır.
 - Fiilen uygulanan sıra (A1 · ChatGPT · 1. deneme): L-TR → I-EN → L-EN → I-TR → N-TR → N-EN.
 
+### Kayıt notları
+- **B2 · ChatGPT · 1. deneme (23 Kasım 2026):** 17:20–17:22 arasında alınmış ilk B2 ekran görüntüleri Bahar'ın beyanıyla test dışıdır ve kayda alınmadı; kayıttaki B2 satırları sonraki setten gelir. İki set arasında puanı farklı olan tek kod B2-L-TR'dir (ilk sette Düzeltti, kayıtta K2). Şeffaflık için bu not raporun Yöntem/Sınırlılıklar bölümüne taşınacak.
+
 ---
 
 ## Madde 3 (Yöntem) · Talimatlı form (onaylandı · 23 Kasım 2026 · testten ÖNCE yazıldı)
