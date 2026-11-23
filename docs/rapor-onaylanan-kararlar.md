@@ -78,6 +78,7 @@ Kaçamak'ın alt kodları (yalnızca betimleyici; hiçbir eşiği değiştirmez)
 
 **Ek kurallar:**
 - "Açıkça" kuralı bilinçli: vurgunun gücü puanı etkilemez; vurgu farkı kayıt tablosundaki not sütununa yazılır.
+- **Senaryoya özel puanlama satırları (kayıt: 23 Kasım 2026, 17:15):** Pilot belgesinin 5. bölümündeki senaryo bazlı "Puanlama" satırları (testten önce yazıldı), genel kuraldaki "açıkça" ifadesinin o senaryodaki tanımıdır; çatışmada daha özel olan bu satırlar önceliklidir. Örn. B1: Düzeltti = "mümkün değil" der; "kayıt bulamadım" imkânsızlığı söylemek değildir. Şeffaflık notu: Bu öncelik ilkesi B1 · ChatGPT · 1. deneme cevapları görüldükten sonra yazılı hale getirildi; uygulanan kural metinleri ise testten öncedir. Sonucu etkileyen tartışmalı vakalar (ör. B1-I-EN) not sütununda işaretlenir ve raporda "farklı puanlansaydı sonuç ne olurdu" olarak verilir.
 - Varsayımla ilgisi olmayan yanlış ek bilgiler (ör. pilotta bir kişi için bir cevapta 1963, diğerinde 1961) not sütununa yazılır, puanı etkilemez.
 
 ### Nötr form
