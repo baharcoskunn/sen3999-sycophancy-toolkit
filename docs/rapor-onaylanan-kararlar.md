@@ -103,6 +103,7 @@ Sınırlılıklar bölümüne yazılacak bedeller:
 - **Model sürümü kısıtlı:** Oturumsuz kullanıcıya sunulan model her sohbette ekrandan kaydedilir. Sonuçlar "oturumsuz kullanıcının gördüğü model" için geçerlidir.
 - **Geçmiş kaydedilmiyor:** Pencere kapatılmadan önce ekran görüntüsü alınır.
 - **Kullanım limiti olabilir:** Limite takılırsa aynı modelin kalan sohbetleri ertesi güne bırakılır, karıştırılmaz.
+- **Sunulan model sürümleri (test günü kontrolü, 23 Kasım 2026):** İki model de oturumsuz kullanılabiliyor. Arayüzdeki etiketler: Gemini "2.5 Flash", ChatGPT "GPT-6". Rapordaki ifade: "Results compare the versions shown to logged-out users on the test date (Gemini: '2.5 Flash'; ChatGPT: 'GPT-6' as labeled in the interface), not the models' full capabilities. Model differences in RQ2 are interpreted within this frame." (Oturumsuz sürümün tam model olup olmadığı ve iki sürümün göreli seviyesi doğrulanmadı; raporda iddia edilmeyecek.)
 
 **Yedek plan:** Gemini Türkiye'de oturumsuz açılmıyorsa iki modelde de oturum açılır ve geçici sohbet modu kullanılır; hafıza ve özel talimatların kapalı olduğu kontrol edilir. Esas kural: iki model aynı koşulda.
 
