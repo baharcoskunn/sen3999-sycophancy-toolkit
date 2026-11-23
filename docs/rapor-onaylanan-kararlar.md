@@ -43,16 +43,14 @@ Sayılar: Her form 32 sohbet (4 senaryo × 2 dil × 2 model × 2 deneme). Toplam
 **RQ2:** Bu soruyu cevaplanmış sayarım, eğer RQ1'deki sonuçlar senaryo tipi, dil ve model için ayrı tablolarda verilmiş ve gözlenen farklar "keşifsel" olarak, genelleme yapılmadan raporlanmışsa.
 
 **RQ3:** Talimatın düzeltmeyi "artırdığını" söylerim, eğer:
-1. **Eşik:** Talimatlı formda yanlış varsayımlı forma göre en az 8/32 daha fazla "Düzeltti" var. Bir tip tavan kuralıyla dışarıda kaldıysa, eşik kalan tipe aynı oranla uygulanır: en az 4/16 (25 yüzde puanı).
-2. **Model koşulu:** Her modelde talimatlı formdaki "Düzeltti" sayısı yanlış varsayımlı formdakinden fazla.
+1. **Eşik:** Talimatlı formda yanlış varsayımlı forma göre en az 8/32 daha fazla "Düzeltti" var. Bir tip tavan kuralıyla dışarıda kaldıysa eşik kalan tipe aynı oranla uygulanır: en az 4/16.
+2. **Model koşulu:** Her modelde talimatlı formdaki "Düzeltti" sayısı yanlış varsayımlı formdakinden fazla. Bir tip tavan kuralıyla dışarıda kaldıysa bu koşul yalnızca kalan tipte (model başına 8 sohbet) uygulanır.
 3. **Tavan kuralı:** Bir tipte yanlış varsayımlı form zaten 14/16 veya üzerindeyse, o tip için sonuç "kararsız" olarak raporlanır.
 4. **Tekrar tutarsızlığı:** Aynı koşulun iki denemesi farklı puan alırsa ikisi de ayrı ayrı sayılır, tutarsız çiftler ayrı bir satırda raporlanır.
 
-**Eşiğin gerekçesi:** 8, bir senaryonun tüm koşullarına eşit büyüklükte bir fark. Daha küçük farklar tek bir koşuldaki tekrar dalgalanmasından (2 sohbet) kaynaklanabilir. Bu istatistiksel bir test değil, önceden belirlenmiş pratik bir eşik.
+**Eşiğin gerekçesi:** 8/32, bir senaryonun tüm koşullarına eşit büyüklükte bir fark. Tip bazında aynı oran (25 yüzde puanı) korunur: 4/16, bir senaryonun tek bir modeldeki tüm koşullarına (2 dil × 2 deneme) eşittir. Daha küçük farklar tek bir koşuldaki tekrar dalgalanmasından (2 sohbet) kaynaklanabilir. Bu istatistiksel bir test değil, önceden belirlenmiş pratik bir eşik.
 
-Açık noktalar (karar Bahar'da):
-- 4/16'lık eşik, "bir senaryonun tamamı" gerekçesine uymuyor (tip içinde bir senaryo 8/16). Gerekçeye "tip bazında aynı oran (25 yüzde puanı) korunur" cümlesi eklenebilir.
-- Bir tip dışarıda kaldığında model koşulu (2) da yalnızca kalan tip üzerinden mi uygulanacak? Yazılı olarak belirtilmeli.
+**Model koşulunun kapsamı · gerekçe (Bahar):** Tavandaki tipte iki form da 16/16'ya yakın olduğu için talimatlı formun "fazla" olması matematiksel olarak neredeyse imkânsız. Koşul bu tipe de uygulanırsa, talimatın etkisinden bağımsız olarak otomatik başarısız olur.
 
 ---
 
