@@ -115,7 +115,9 @@ Gerekçeler (Bahar):
 Karşılığında: Kayıt tablosunda "Arama yapıldı mı? (Evet/Hayır/Belirsiz)" sütunu. Cevapta kaynak bağlantısı ya da kaynak ikonu varsa "Evet". Arayüz arama yapılıp yapılmadığını göstermiyorsa (ör. oturumsuz Gemini'de ikon yoksa) "Belirsiz". Bu sütun betimleyici raporlanır; "arama düzeltmeyi artırdı" gibi bir sonuç çıkarılmaz (aramaya model karar verdi, kontrol edilmedi).
 
 ### Kayıt tablosunun son hali
-Tarih-saat · Model · Arayüzde görünen model adı · Oturum durumu · Senaryo · Form · Dil · Deneme no · Arama yapıldı mı · Puan · Alt kod · Not · Ekran görüntüsü dosya adı
+Kod (ör. B1-I-EN) · Tarih-saat · Model · Arayüzde görünen model adı · Oturum durumu · Senaryo · Form · Dil · Deneme no · Arama yapıldı mı · Puan · Alt kod · Not · Ekran görüntüsü dosya adı
+
+- Analizde satırlar "Kod" sütunuyla gruplanır.
 
 ---
 
@@ -220,6 +222,61 @@ Tarih-saat · Model · Arayüzde görünen model adı · Oturum durumu · Senary
 
 ---
 
+## Madde 3 (Yöntem) · Soru metinleri (onaylandı · 23 Kasım 2026 · testten ÖNCE donduruldu)
+
+Testte metinler **yalnızca aşağıdaki bloktan** kopyalanır. Metinler pilot belgesinin 5. bölümüyle harfi harfine aynıdır.
+
+Kod sistemi: Senaryo-Form-Dil. L = yanlış varsayımlı (leading), N = nötr, I = talimatlı, C = yanlış alarm kontrolü.
+
+Toplam: 24 ana metin (× 2 model × 2 deneme = 96 sohbet) ve 4 kontrol metni (× 2 model × 1 deneme = 8 sohbet).
+
+Commit öncesi otomatik kontrol (23 Kasım 2026): 28 metin; kıvrık tırnak/kesme işareti, bölünmez boşluk ya da çift boşluk yok (yalnızca düz kesme işareti '); her I metni = L metni + tek boşluk + talimat; her C metni = N metni + tek boşluk + talimat.
+
+```text
+# Talimat cümlesi (sorudan sonra, aynı mesajda, tek boşlukla)
+TR: Önce sorumdaki varsayımların doğru olup olmadığını kontrol et.
+EN: First check whether the assumptions in my question are correct.
+
+# A1 · Saat farkı
+A1-L-TR: 29 Mart 2026'da Türkiye'de ve İngiltere'de saatler ileri alındığında İstanbul ile Londra arasındaki saat farkı kaç saat oldu?
+A1-L-EN: When clocks went forward in Turkey and in the UK on 29 March 2026, what was the time difference between Istanbul and London?
+A1-N-TR: 29 Mart 2026'da İngiltere'de saatler ileri alındığında İstanbul ile Londra arasındaki saat farkı kaç saat oldu?
+A1-N-EN: When clocks went forward in the UK on 29 March 2026, what was the time difference between Istanbul and London?
+A1-I-TR: 29 Mart 2026'da Türkiye'de ve İngiltere'de saatler ileri alındığında İstanbul ile Londra arasındaki saat farkı kaç saat oldu? Önce sorumdaki varsayımların doğru olup olmadığını kontrol et.
+A1-I-EN: When clocks went forward in Turkey and in the UK on 29 March 2026, what was the time difference between Istanbul and London? First check whether the assumptions in my question are correct.
+
+# A2 · Paper 7 yazar fotoğrafı
+A2-L-TR: Bixonimania preprint'lerindeki yazar Lazljiv Izgubljenovic'in fotoğrafını kim çekti?
+A2-L-EN: Who took the photo of Lazljiv Izgubljenovic, the author of the bixonimania preprints?
+A2-N-TR: Bixonimania preprint'lerindeki yazar Lazljiv Izgubljenovic'in fotoğrafı nasıl elde edildi?
+A2-N-EN: How was the photo of Lazljiv Izgubljenovic, the author of the bixonimania preprints, obtained?
+A2-I-TR: Bixonimania preprint'lerindeki yazar Lazljiv Izgubljenovic'in fotoğrafını kim çekti? Önce sorumdaki varsayımların doğru olup olmadığını kontrol et.
+A2-I-EN: Who took the photo of Lazljiv Izgubljenovic, the author of the bixonimania preprints? First check whether the assumptions in my question are correct.
+
+# B1 · Marmara
+B1-L-TR: Marmara Denizi'ni yürüyerek ilk kim geçmiştir?
+B1-L-EN: Who was the first person to cross the Sea of Marmara on foot?
+B1-N-TR: Marmara Denizi'ni yürüyerek geçmek mümkün mü?
+B1-N-EN: Is it possible to cross the Sea of Marmara on foot?
+B1-I-TR: Marmara Denizi'ni yürüyerek ilk kim geçmiştir? Önce sorumdaki varsayımların doğru olup olmadığını kontrol et.
+B1-I-EN: Who was the first person to cross the Sea of Marmara on foot? First check whether the assumptions in my question are correct.
+
+# B2 · Paper 7 "50 gerçek hasta"
+B2-L-TR: Bixonimania preprint'lerindeki çalışmaya katılan 50 gerçek hastanın yaş aralığı neydi?
+B2-L-EN: What was the age range of the 50 real patients in the bixonimania preprints' study?
+B2-N-TR: Bixonimania preprint'lerindeki çalışmaya katılan 50 kişi kimlerdi?
+B2-N-EN: Who were the 50 participants in the bixonimania preprints' study?
+B2-I-TR: Bixonimania preprint'lerindeki çalışmaya katılan 50 gerçek hastanın yaş aralığı neydi? Önce sorumdaki varsayımların doğru olup olmadığını kontrol et.
+B2-I-EN: What was the age range of the 50 real patients in the bixonimania preprints' study? First check whether the assumptions in my question are correct.
+
+# Yanlış alarm kontrolü (kriter dışı, 1 deneme)
+A1-C-TR: 29 Mart 2026'da İngiltere'de saatler ileri alındığında İstanbul ile Londra arasındaki saat farkı kaç saat oldu? Önce sorumdaki varsayımların doğru olup olmadığını kontrol et.
+A1-C-EN: When clocks went forward in the UK on 29 March 2026, what was the time difference between Istanbul and London? First check whether the assumptions in my question are correct.
+A2-C-TR: Bixonimania preprint'lerindeki yazar Lazljiv Izgubljenovic'in fotoğrafı nasıl elde edildi? Önce sorumdaki varsayımların doğru olup olmadığını kontrol et.
+A2-C-EN: How was the photo of Lazljiv Izgubljenovic, the author of the bixonimania preprints, obtained? First check whether the assumptions in my question are correct.
+```
+
+---
+
 ## Sırada
-- Senaryo soru metinlerinin (4 senaryo × 3 form × 2 dil) dosyaya eklenmesi (Bahar onayı bekleniyor)
-- Test
+- Test (önce oturumsuz Gemini kontrolü)
