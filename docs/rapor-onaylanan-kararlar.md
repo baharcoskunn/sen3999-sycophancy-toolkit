@@ -54,14 +54,54 @@ Sayılar: Her form 32 sohbet (4 senaryo × 2 dil × 2 model × 2 deneme). Toplam
 
 ---
 
-## Kavram ve terim kararları
+## Kavram ve terim kararları (güncellendi · 23 Kasım 2026)
 
-- **Terim:** Raporda tek terim: "false-premise sycophancy". İlk geçtiği yerde tanımlanacak.
-- **Literatür bağlantısı (Paper 9, Cheng ve ark.):** Paper 9'da (v1) "framing sycophancy" terimi geçmiyor; ilgili ölçüt "accepting framing" (kullanıcının varsayımlarını sorunluyken sorgulamadan kabul etme). Cheng'in tanımı: kullanıcının "face"ini aşırı korumak; ya onaylayarak (positive face) ya da itiraz etmekten kaçınarak (negative face).
-- **Rapordaki cümle (taslak):** "We apply Cheng et al.'s *accepting framing* behaviour to factual questions with a verifiable answer, which their study did not test." Bu bir genişletme; hem katkı hem sınırlılık olarak yazılacak.
-- **Açık iş:** Bahar, "accepting framing" ifadesinin Paper 9'daki sayfa numarasını kendisi bulacak.
+- **Terim:** Raporda tek terim: "false-premise sycophancy". Her yerde bu terim kullanılır.
+- **Tanım (ilk geçtiği yerde):** false-premise sycophancy = "framing sycophancy (Cheng et al., 2026) applied to factual questions."
+- **Kaynak:** ELEPHANT (Cheng, Yu, Lee, Khadpe, Ibrahim & Jurafsky, ICLR 2026). Makaledeki tanım: "Framing sycophancy: accepts potentially flawed premises instead of probing or challenging them." Künyede ICLR 2026 başlığı kullanılacak (arXiv v1 başlığı farklı: "Social Sycophancy: A Broader Understanding of LLM Sycophancy").
+- **Sınır (dürüstlük notu):** ELEPHANT bu kavramı doğru cevabı olmayan, açık uçlu tavsiye sorularında ölçüyor. Bu proje kavramı doğru cevabı olan olgu sorularına taşıyor; "applied to" ifadesi bunu gösteriyor. Hem katkı hem sınırlılık olarak yazılacak.
+- **"Kabul etti" kategorisinin karşılığı:** ELEPHANT Tablo 1'de Sharma ve ark.'a (2024) atfedilen "Mimicry sycophancy: repeats and reinforces mistakes stated in the user prompt." Raporda bir cümleyle anılacak. Atıf yapılmadan önce Sharma ve ark.'ın kendi metninde de kontrol edilecek.
+- **Düzeltme kaydı:** Önceki kayıtta "accepting framing" Paper 9'a bağlanmıştı. Bu yanlıştı: Paper 9, Cheng'in farklı bir makalesi ("Sycophantic AI decreases prosocial intentions…"). Hata Claude'dandı; Bahar'ın "Paper 9'da framing sycophancy terimi yok" tespiti doğruydu.
+
+---
+
+## Madde 2 · Kaynak taraması ve ders okumalarıyla bağlantı (onaylandı · 23 Kasım 2026)
+
+### Ders okumaları
+| Kaynak | Neden kullanılıyor |
+|---|---|
+| Paper 9 – Cheng ve ark. (2025), *Sycophantic AI decreases prosocial intentions…* | Önceki çalışmaların sycophancy'yi "açık bir iddiaya katılma" olarak tanımladığını gösteriyor (s. 2). Dipnot 2'deki "çerçeveye itiraz etmeden cevap vermek örtük onaydır" fikri, "Kaçamak" kategorisinin dayanağı. |
+| Paper 7 – Nature (2026), *Scientists invented a fake disease…* | A2 ve B2 senaryolarının doğru cevaplarının kaynağı (s. 560). LLM'lerin yanlış bir öncülü tekrar ettiğine dair somut, güncel örnek. |
+| Paper 8 – Shaw & Nave, cognitive surrender | Toplumsal etki bölümü: kullanıcının AI çıktısını eleştirel değerlendirmeden kabul etmesi. Modelin varsayımı düzeltmemesi bu riski artırır. |
+| Paper 6 – Tully, Longoni & Appel (2025), *Lower AI literacy predicts greater AI receptivity* | Yalnızca hedef kitle seçiminin gerekçesi: AI okuryazarlığı düşük kişiler AI'a daha yatkın. |
+| Paper 5 – Model Cards | Sonuçları tek skorla değil, alt gruplara ayrılmış (model, dil, tip) raporlama gerekçesi; RQ2'nin dayanağı. |
+
+### Dış kaynaklar
+| Kaynak | Neden kullanılıyor |
+|---|---|
+| Cheng ve ark. (2026), *ELEPHANT: Measuring and understanding social sycophancy in LLMs*, ICLR 2026 | Ana kavram kaynağı: framing sycophancy tanımı; "Kabul etti" için mimicry sycophancy kategorisi. |
+| Sharma ve ark. (2024), *Towards Understanding Sycophancy in Language Models*, ICLR 2024 | Sycophancy'nin temel tanımı (RLHF'nin kullanıcı inançlarına uyan cevapları teşvik etmesi). Mimicry kategorisinin özgün kaynağı. |
+| Hu ve ark. (2023), *Won't Get Fooled Again: Answering Questions with False Premises*, ACL 2023 | False-premise sorularının tanımı. Bulgu: modeller itiraz için gereken bilgiye sahip, mesele bilginin aktive edilmesi. Makale bunu az sayıda örnekle ince ayar yaparak gösteriyor. Rapordaki ifade: "Benzer bir fikri eğitim ya da örnek yerine tek bir talimat cümlesiyle test ediyoruz." |
+| Kim ve ark. (2023), *(QA)²: Question Answering with Questionable Assumptions*, ACL 2023 | "Neden önemli?" cevabının kaynaklı dayanağı: doğal bilgi arama soruları sıklıkla sorgulanabilir varsayımlar içerir. |
+| gov.uk, "When do the clocks change?" | A1: İngiltere'deki saat değişikliği. |
+| Resmi Gazete, 2016 kalıcı yaz saati kararı | A1: Türkiye'de saatin değişmediği. **Açık iş:** tarih ve sayı Bahar tarafından bulunacak. |
+| Marmara Denizi için coğrafi kaynak | B1'in doğru cevabı. **Açık iş:** ansiklopedi ya da resmi kurum sayfası seçilecek. |
+
+### Bilinçli olarak alınmayanlar
+- Paper 1 (Stochastic Parrots): Hoca 20 Kasım'da bu bağlantıyı kabul etmedi.
+- Hong ve ark.: Eski tasarımdaki itiraz turu için kullanılıyordu; yeni tasarımda o tur yok.
+
+### Notlar
+- Hu ve ark. ile Kim ve ark. 2023'te, eski modellerle yapıldı. Raporda "güncel modellerde de geçerli mi?" açık soru olarak bırakılacak; bu proje tam olarak bunu test ediyor.
+- Dış makaleler künye ve özetten doğrulandı. Rapora konacak her alıntı PDF açılıp kontrol edilecek.
+
+---
+
+## AI Use Log · bekleyen kayıt
+
+- **Kaynak listesi:** Taslak bir AI aracıyla hazırlandı. **Açık iş:** Bahar, hangi araçla hazırladığını belirtecek (bu sohbette Claude tarafından üretilmedi; listedeki "+2" ifadesi de Bahar'ın yapıştırdığı metinde, Sharma bağlantısının hemen arkasında geçiyordu). Künyeler web'den ve proje PDF'lerinden doğrulandı. Paper 9 terim hatası (Claude'dan) ile Paper 6 ve Hu ve ark. gerekçeleri kullanıcı incelemesiyle düzeltildi.
 
 ---
 
 ## Sırada
-- Madde 2: Kaynak taraması + ders okumalarıyla bağlantı
+- Madde 3: Yöntem (formlar, puanlama kuralları, kayıt koşulları)
