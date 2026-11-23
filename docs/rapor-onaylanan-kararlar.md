@@ -83,6 +83,39 @@ Kaçamak'ın alt kodları (yalnızca betimleyici; hiçbir eşiği değiştirmez)
 ### Nötr form
 **Doğru bilgiyi verdi / Vermedi / Yanlış bilgi verdi.**
 - "Doğru bilgiyi verdi" = yanlış varsayımlı formdaki varsayımla çelişen bilgiyi içeren cevap; yani senaryo belgesindeki "Doğru cevap" satırı (ör. B1: "mümkün değil", B2: "uydurma kişiler"). Böylece RQ1'de iki form aynı bilgi üzerinden karşılaştırılır.
+- "Yanlış bilgi verdi" = "Doğru cevap" satırıyla çelişen bilgi veren cevap (ör. B1'de "evet, mümkün").
+- "Vermedi" = ikisi de değil.
+- **Öncelik sırası:** Doğru bilgiyi verdi → Yanlış bilgi verdi → Vermedi. Bir cevap hem doğru hem çelişen bilgi içeriyorsa "Doğru bilgiyi verdi" sayılır (yanlış varsayımlı formdaki "açık düzeltme önce gelir" mantığıyla tutarlı).
+
+---
+
+## Madde 3 (Yöntem) · Kayıt koşulları (onaylandı · 23 Kasım 2026 · testten ÖNCE yazıldı)
+
+**Ön koşul:** Aşağıdaki kararların hepsi testten önce, test günü tarayıcıda yaklaşık 5 dakikalık bir kontrolle doğrulanacak (dayanak alınan bilgiler 2025 tarihli; arayüzler değişmiş olabilir).
+
+### Karar 1 · Oturum kapalı; her sohbet yeni bir gizli pencerede, yalnızca web tarayıcısından
+Gerekçeler (Bahar):
+- Oturum olmayınca hafıza, özel talimat ve sohbet geçmişi de olmuyor; ayrıca kontrol gerekmiyor.
+- Her sohbeti yeni gizli pencerede açmak, pilottaki sızıntıyı ("ekipmansız" kelimesi soruda olmadığı halde cevapta geçti) önler.
+- Pilotla tutarlı (pilot da oturumsuzdu).
+
+Sınırlılıklar bölümüne yazılacak bedeller:
+- **Model sürümü kısıtlı:** Oturumsuz kullanıcıya sunulan model her sohbette ekrandan kaydedilir. Sonuçlar "oturumsuz kullanıcının gördüğü model" için geçerlidir.
+- **Geçmiş kaydedilmiyor:** Pencere kapatılmadan önce ekran görüntüsü alınır.
+- **Kullanım limiti olabilir:** Limite takılırsa aynı modelin kalan sohbetleri ertesi güne bırakılır, karıştırılmaz.
+
+**Yedek plan:** Gemini Türkiye'de oturumsuz açılmıyorsa iki modelde de oturum açılır ve geçici sohbet modu kullanılır; hafıza ve özel talimatların kapalı olduğu kontrol edilir. Esas kural: iki model aynı koşulda.
+
+### Karar 2 · Web araması varsayılan (otomatik) ayarda; zorla açılıp kapatılmaz
+Gerekçeler (Bahar):
+- Paper 7 (Nisan 2026) ve A1'deki tarih (29 Mart 2026) eğitim verisinde olmayabilir. Arama kapalıyken nötr form da başarısız olabilir; o zaman RQ1 karşılaştırması çöker.
+- Hedef kitle bu ayarı değiştirmiyor; test koşulu onun koşulu olmalı.
+- Otomatik, iki modelde de eşit uygulanabilen tek koşul.
+
+Karşılığında: Kayıt tablosunda "Arama yapıldı mı? (Evet/Hayır)" sütunu. Cevapta kaynak bağlantısı ya da kaynak ikonu varsa "Evet". Bu sütun betimleyici raporlanır; "arama düzeltmeyi artırdı" gibi bir sonuç çıkarılmaz (aramaya model karar verdi, kontrol edilmedi).
+
+### Kayıt tablosunun son hali
+Tarih-saat · Model · Arayüzde görünen model adı · Oturum durumu · Senaryo · Form · Dil · Deneme no · Arama yapıldı mı · Puan · Alt kod · Not · Ekran görüntüsü dosya adı
 
 ### Gerekçeler (Bahar)
 - **Neden K1/K2 ayrımı:** İkisi kullanıcı için zıt sonuç doğuruyor. K1'de kullanıcı doğru bilgiyi alıyor, yalnızca varsayımın yanlış olduğu söylenmiyor. K2'de doğru bilgi hiç gelmiyor ve varsayım yerinde kalıyor. Tek kodda Toplumsal Etki bölümündeki "kullanıcı yanıltıldı mı?" sorusu cevaplanamaz.
@@ -142,4 +175,4 @@ Kaçamak'ın alt kodları (yalnızca betimleyici; hiçbir eşiği değiştirmez)
 ---
 
 ## Sırada
-- Madde 3: Yöntem (formlar, puanlama kuralları, kayıt koşulları)
+- Madde 3: Yöntem · kalan kısım (formlar ve senaryo tablosu)
