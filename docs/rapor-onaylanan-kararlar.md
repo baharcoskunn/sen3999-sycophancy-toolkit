@@ -99,7 +99,7 @@ Sayılar: Her form 32 sohbet (4 senaryo × 2 dil × 2 model × 2 deneme). Toplam
 
 ## AI Use Log · bekleyen kayıt
 
-- **Kaynak listesi:** Taslak bir AI aracıyla hazırlandı. **Açık iş:** Bahar, hangi araçla hazırladığını belirtecek (bu sohbette Claude tarafından üretilmedi; listedeki "+2" ifadesi de Bahar'ın yapıştırdığı metinde, Sharma bağlantısının hemen arkasında geçiyordu). Künyeler web'den ve proje PDF'lerinden doğrulandı. Paper 9 terim hatası (Claude'dan) ile Paper 6 ve Hu ve ark. gerekçeleri kullanıcı incelemesiyle düzeltildi.
+- **Kaynak listesi (23 Kasım 2026):** Claude ile kaynak listesi taslağı oluşturuldu; künyeler web'den ve proje PDF'lerinden doğrulandı; Paper 9 terim hatası ve Paper 6 ile Hu ve ark. gerekçeleri kullanıcı incelemesiyle düzeltildi.
 
 ---
 
