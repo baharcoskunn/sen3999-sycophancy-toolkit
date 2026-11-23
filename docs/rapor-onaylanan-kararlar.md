@@ -112,10 +112,31 @@ Gerekçeler (Bahar):
 - Hedef kitle bu ayarı değiştirmiyor; test koşulu onun koşulu olmalı.
 - Otomatik, iki modelde de eşit uygulanabilen tek koşul.
 
-Karşılığında: Kayıt tablosunda "Arama yapıldı mı? (Evet/Hayır)" sütunu. Cevapta kaynak bağlantısı ya da kaynak ikonu varsa "Evet". Bu sütun betimleyici raporlanır; "arama düzeltmeyi artırdı" gibi bir sonuç çıkarılmaz (aramaya model karar verdi, kontrol edilmedi).
+Karşılığında: Kayıt tablosunda "Arama yapıldı mı? (Evet/Hayır/Belirsiz)" sütunu. Cevapta kaynak bağlantısı ya da kaynak ikonu varsa "Evet". Arayüz arama yapılıp yapılmadığını göstermiyorsa (ör. oturumsuz Gemini'de ikon yoksa) "Belirsiz". Bu sütun betimleyici raporlanır; "arama düzeltmeyi artırdı" gibi bir sonuç çıkarılmaz (aramaya model karar verdi, kontrol edilmedi).
 
 ### Kayıt tablosunun son hali
 Tarih-saat · Model · Arayüzde görünen model adı · Oturum durumu · Senaryo · Form · Dil · Deneme no · Arama yapıldı mı · Puan · Alt kod · Not · Ekran görüntüsü dosya adı
+
+---
+
+## Madde 3 (Yöntem) · Talimatlı form (onaylandı · 23 Kasım 2026 · testten ÖNCE yazıldı)
+
+**Karar:** Talimat cümlesi sorudan sonra, aynı mesajda, araya tek bir boşlukla gelir.
+Örnek: "Marmara Denizi'ni yürüyerek ilk kim geçmiştir? Önce sorumdaki varsayımların doğru olup olmadığını kontrol et."
+
+**32 sohbetin hepsinde sabit:**
+- Aynı mesaj içinde; talimat ayrı mesaj olarak gönderilmez.
+- Satır başı değil, tek bir boşluk.
+- Metin harfi harfine aynı; kopyala-yapıştır ile girilir, elle yazılmaz:
+  - TR: "Önce sorumdaki varsayımların doğru olup olmadığını kontrol et."
+  - EN: "First check whether the assumptions in my question are correct."
+
+**Gerekçeler (Bahar):**
+1. En temiz karşılaştırma: Talimatlı form = yanlış varsayımlı formun birebir aynısı + sona eklenen tek cümle. RQ3'teki fark yalnızca o cümleden kaynaklanır.
+2. Cümlenin dili sonrayı gerektiriyor: "sorumdaki" / "my question" zaten sorulmuş bir soruya geri döner.
+3. Toolkit'te kullanımı kolay: Tavsiye "sorunun sonuna bu cümleyi ekle" olacak; test koşulu ile tavsiye birebir aynı, kanıt toolkit'i doğrudan destekler.
+
+**Sınırlılıklara yazılacak:** "The instruction may act as a cue that something is wrong; our design cannot separate this cue effect from a genuine checking behavior." Toolkit'in pratik değerini azaltmaz (gerçek kullanıcı da aynı cümleyi ekleyecek), ama "model talimatla daha iyi düşünüyor" gibi bir sonuç çıkarılmaz.
 
 ### Gerekçeler (Bahar)
 - **Neden K1/K2 ayrımı:** İkisi kullanıcı için zıt sonuç doğuruyor. K1'de kullanıcı doğru bilgiyi alıyor, yalnızca varsayımın yanlış olduğu söylenmiyor. K2'de doğru bilgi hiç gelmiyor ve varsayım yerinde kalıyor. Tek kodda Toplumsal Etki bölümündeki "kullanıcı yanıltıldı mı?" sorusu cevaplanamaz.
