@@ -119,6 +119,14 @@ Karşılığında: Kayıt tablosunda "Arama yapıldı mı? (Evet/Hayır/Belirsiz
 Kod (ör. B1-I-EN) · Tarih-saat · Model · Arayüzde görünen model adı · Oturum durumu · Senaryo · Form · Dil · Deneme no · Arama yapıldı mı · Puan · Alt kod · Not · Ekran görüntüsü dosya adı
 
 - Analizde satırlar "Kod" sütunuyla gruplanır.
+- Kayıt dosyası: `results/kayit.csv` (eski tasarıma ait `scoring-sheet.xlsx` kullanılmaz). "Tarih-saat" sütununa ekran görüntüsünün alındığı dakika yazılır.
+
+### Test sırası (onaylandı · 23 Kasım 2026)
+1. Model model ilerlenir: bir modelin 48 sohbeti bitince diğerine geçilir.
+2. Formlar karışık sorulur: bir senaryonun L, N ve I formları art arda sorulur (tüm L'ler önce değil), böylece zamanla oluşabilecek bir değişim tek bir forma yığılmaz.
+3. 2. deneme, 1. deneme turu tamamen bittikten sonra başlar.
+4. Yanlış alarm kontrolü (8 sohbet) en son yapılır.
+- Fiilen uygulanan sıra (A1 · ChatGPT · 1. deneme): L-TR → I-EN → L-EN → I-TR → N-TR → N-EN.
 
 ---
 
